@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // 아래 경로만 동영상들이 위치한 경로로 변경하면 됩니다.
-const FOLDER_ROOT = "/Users/user/Downloads/동영상/VIDEO_ROOT/VLOG_01/FOOTAGE";
+const FOLDER_ROOT = "/";
 
 async function main() {
   const videos = readVideos();
