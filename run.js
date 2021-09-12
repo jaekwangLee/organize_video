@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // 아래 경로만 동영상들이 위치한 경로로 변경하면 됩니다.
-const FOLDER_ROOT = "/";
+const FOLDER_ROOT = "/Users/user/Downloads";
 
 async function main() {
   const videos = readVideos();
@@ -9,7 +9,7 @@ async function main() {
 }
 
 async function organizeVideosByDay(videos, index) {
-  const video = videos[0];
+  const video = videos[index];
   const currentVideoStats = fs.statSync(`${FOLDER_ROOT}/${video}`);
   const dirName = `${dateFormatting(currentVideoStats.birthtime)}_VIDEOS`;
   isDir(dirName);
